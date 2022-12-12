@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scrollmap Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <link rel="stylesheet" href="./lib/scrollmap.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Niconne&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="content">
+        <!--title block, background image is title image-->
+        <div class="row" style="background-size:cover; background-image:url(img/terracottastatue.jpeg)">
+            <div class="title">
+                <!--title text-->
+                <h1>The Warring States Period: The Formation of the First Imperial Dynasty of China</h1>
+                <!--subtitle or author-->
+                <p class="author">Simone Tripoli</p>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p>The history of China spans roughly 5,000 years. Within this large time span, several important events occurred that shaped the development of the region.</p>
+            </div>
+        </div>
+        <!--background images with text scrolling over them-->
+        <div class="scroll-container">    
+            <!--background images-->
+            <div class="background-item">
+                <!--data-slide property used to specify when the background should first-->
+                <img src="img/comRev.jpeg" data-slide="0" class="fit vert-center">
+                <img src="img/ageofinvention.jpg" data-slide="1" class="fit vert-center hidden">
+                <img src="img/mandateofheaven.png.crdownload" data-slide="2" class="fit vert-center hidden">
+            </div>
+            <!--foreground text blocks-->
+            <div class="foreground-item no-event">
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">Some of these events would include the communist revolution in 1949 CE</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin"> the Age of Invention in 1088 CE where things like printing, paper money, gunpowder, and the magnetic compass were invented.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">or even the establishment of the Mandate of Heavan in 1046 BCE.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p>However, probably the most important even that shaped Chinese History was the unification of China in 221 BCE marking the end of the Warring States Period. The Warring States Period of China is a well-known event in Chinese History as it led to the first Chinese Empire controlled by the Qin Dynasty!</p>
+            </div>
+        </div>
+        <!--image block-->
+        <div class="row">
+            <div class="center">
+                <img class="fit" src="img/aesthetic.png">
+                <p>The Qin Dynasty is one of the most well-known dynasty in Chinese history </p>
+            </div>
+        </div>
+        <!--side-by-side image and text block-->
+        <div class="row">
+            <div class="left">
+                <p class="vert-center">In this theme, sakura/cherry blossom flowers represent capital cities. Other cities are represented with the regular dot. This is because cherry blossoms only bloom for one month throughout the year, so I liked the idea of making this icon rare.</p>
+            </div>
+            <div class="right">
+                <img class="fit" src="img/capitals.png">
+            </div>
+        </div>
+        <!--side-by-side image and text block-->
+        <div class="row">
+            <div class="left">
+                <p class="vert-center">For the road network, the major roads are colored in a dark brown. This is to create the illusion that the roads are branches. Meanwhile, the shields are pretty standard. I made the font of the numbers the same as the font of the city/country/state names: Knewave Regular.</p>
+            </div>
+            <div class="right">
+                <img class="fit" src="img/roads.PNG">
+            </div>
+        </div>
+        <!--bootstrap carousel, centered-->
+        <div class="row">
+            <div class="center-wide">
+                <p>The map  loses texture as you zoom in.</p>
+                <!--slideshow of images, also known as a carousel-->
+                <!--remove "carousel-dark" if you want a lighter version of the carousel-->
+                <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <!--indicator buttons at the bottom of the carousel that show the total number of slides-->
+                    <div class="carousel-indicators">
+                        <!--there should be as many of these buttons as there are slides in your carousel-->
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <!--images in the carousel-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/USAzoomedout.PNG" class="w-150" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/CBslide2.PNG" class="w-150" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/CBslide3.PNG" class="w-150" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/CBslide4.PNG" class="w-150" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/CBslide5.PNG" class="w-150" alt="...">
+                        </div>
+                    </div>
+                    <!--previous/next buttons that allow users to click from one slide to the next-->
+                    <button id="prev-button" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button id="next-button" class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--background images with text scrolling over them-->
+        <div class="scroll-container">    
+            <!--background images-->
+            <div class="background-item">
+                <!--data-slide property used to specify when the background should first-->
+                <img src="img/Madison1.PNG" data-slide="0" class="fit vert-center">
+                <img src="img/Torino.PNG" data-slide="1" class="fit vert-center hidden">
+                <img src="img/NorthItaly.PNG" data-slide="2" class="fit vert-center hidden">
+                <img src="img/Chicago.PNG" data-slide="3" class="fit vert-center hidden">
+                <img src="img/Venice1.PNG" data-slide="4" class="fit vert-center hidden">
+                <img src="img/Boston.PNG" data-slide="5" class="fit vert-center hidden">
+            </div>
+            <!--foreground text blocks-->
+            <div class="foreground-item no-event">
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">Take a look at a few different geographies, starting with Madison, Wisconsin.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin"> The italian city of Turin (or Torino) is so visually complex. You can clearly see the features of a major city.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">However, when we move slightly north, near the French-Italian border, we see more natural areas and less cityscapes.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">Here are some other landscapes: Chicago, Illinois.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">Venice, Italy.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">Boston, Massachussetts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--mapbox iframe-->
+        <div class="row">
+            <div class="center">
+                <p>Play around the full map.</p>
+                <iframe src="https://api.mapbox.com/styles/v1/sheek227/clampnjk5002o14nx5auj2gul.html?title=view&access_token=pk.eyJ1Ijoic2hlZWsyMjciLCJhIjoiY2wybmdmbjkxMHdtZzNiczN2NDYxcnN5ZyJ9.Nibh3Ez99CCDxL_PMizDlw&zoomwheel=true&fresh=true#9.62/44.318/-110.6298" class="fit" width="600" height="600" ></iframe>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row no-margin">
+            <div class="center">
+                <div class="credits">
+                    <hr>
+                    <p><b>Credits:</b></p>
+                    <p>Map created with Mapbox Studio</p>
+                    <p>Data from openstreetmap</p>
+                    <p>Aesthetic based off of the artwork of Hiroshi Yoshida</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="./lib/scrollmap.js"></script>
+<script type="text/javascript" src="./lib/bootstrap.min.js"></script>
+
+</body>
+</html>
