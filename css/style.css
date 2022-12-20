@@ -1,6 +1,19 @@
 body{
     font-family: 'Goudy Bookletter 1911', serif;
+    background-color: beige;
 }
 p{
     font-size:20px;
+    font-style: times;
+}
+.title >*{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.caption >*{
+    font-size: 20px;
+    color: black;
+    -webkit-text-stroke-width: .05px;
+    -webkit-text-stroke-color: white;
 }
